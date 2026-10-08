@@ -53,8 +53,11 @@ An end-to-end, AI-powered data analysis pipeline that allows users to query rela
 This project is packaged as a single Jupyter Notebook optimized for free-tier GPU environments like Google Colab or Kaggle.
 
 * Launch the Environment: Click the "Open in Colab" badge above to load the notebook directly into Google Colab, or clone the repository and upload the .ipynb file to Kaggle. Ensure your runtime hardware accelerator is set to T4 GPU.
+
 * Install Dependencies: Run the first cell to install the required libraries (streamlit, pyngrok, transformers, bitsandbytes, langchain, etc.).
+  
 * Build the Application: Run the second cell to write the unified Streamlit application (app.py) to the instance's local storage.
+  
 * Authenticate & Run: Execute the final cell. You will be prompted to securely enter your Ngrok Authtoken. Once entered, the script will launch the backend server and generate a public URL to access your live application.
 
 ---
@@ -62,9 +65,13 @@ This project is packaged as a single Jupyter Notebook optimized for free-tier GP
 # 🚀 Usage
 
 * Access the Interface: Click the generated Ngrok public_url in the notebook output to open the Streamlit web app.
+
 * Upload Data: In the left sidebar, click "Browse files" and upload any flat CSV dataset. The app will automatically sanitize the column headers and ingest the data into a local SQLite database in the background.
+
 * Review Schema: The sidebar will update to display the dynamically extracted database schema (tables and columns), confirming the data is ready to query.
+
 * Chat with your Data: Type natural language questions into the chat input (e.g., "What is the total revenue grouped by product line, sorted descending?" or "Show me a summary of sales by city").
+
 * Analyze Outputs: The agent will execute the pipeline and display:
     * The generated SQL query.
 
@@ -86,8 +93,11 @@ Natural language translates directly into executed SQL, business analysis, and P
 # 📈 Results
 
 * Frictionless Deployment: Consolidated the backend LLM inference and frontend Streamlit GUI into a single executable notebook, allowing users to spin up a fully functional AI agent in under two minutes without local environment configuration.
+
 * Optimized Hardware Utilization: Leveraged BitsAndBytes 4-bit quantization on the Mistral-Nemo-Instruct-2407 model, enabling a high-parameter agent to run smoothly within the 16GB VRAM constraints of a free cloud GPU.
+
 * Defensive Pipeline Architecture: Engineered strict PromptTemplates and Regex fallback parsers to mitigate common LLM hallucinations, ensuring stable SQL execution, accurate Pandas column mapping, and reliable JSON output generation.
+
 * Automated Data Sanitization: Built a pre-processing ingestion layer that automatically normalizes messy CSV headers, preventing execution failures caused by spaces or special characters in SQL queries.
 
 ---
@@ -95,7 +105,9 @@ Natural language translates directly into executed SQL, business analysis, and P
 # 🔮 Future Improvements
 
 * Multi-Turn Conversational Memory: Integrate LangChain's ConversationBufferMemory so the agent can remember previous queries and apply iterative filters (e.g., "Now show me that previous chart, but only for female customers").
+
 * Multi-Table Relational Support: Upgrade the file uploader to accept multiple CSVs simultaneously, automatically mapping primary and foreign keys to support complex JOIN queries.
+
 * Report Export Functionality: Add a utility for users to download the generated SQL, DataFrames, and Matplotlib charts as a consolidated PDF or HTML business report.
 
 ---
