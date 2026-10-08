@@ -85,8 +85,24 @@ This project is packaged as a single Jupyter Notebook optimized for free-tier GP
 
 # 📸 Demo
 
-Seamlessly upload CSVs and automatically generate SQL schemas.
-Natural language translates directly into executed SQL, business analysis, and Python-rendered visualizations.
+**Data Source Upload**
+
+![Upload Interface](Demo/Screenshot%202026-10-08%20060437.png)
+
+
+**SQL Generation and Results**
+
+![SQL Query](Demo/Screenshot%202026-10-08%20060754.png)
+
+
+**Automated Business Analysis**
+
+![Business Analysis](Demo/Screenshot%202026-10-08%20061053.png)
+
+
+**Dynamic Visualization**
+
+![Visualization Chart](Demo/Screenshot%202026-10-08%20061145.png)
 
 ---
 
