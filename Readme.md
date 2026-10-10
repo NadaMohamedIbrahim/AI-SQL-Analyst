@@ -18,8 +18,10 @@
 # 📖 Project Overview
 
 📊 AI SQL Analyst Agent
+
 An end-to-end, AI-powered data analysis pipeline that allows users to query relational databases using natural language. This project leverages a locally-hosted Large Language Model (Mistral-Nemo-Instruct) to dynamically introspect database schemas, write and execute secure SQL queries, and generate automated business insights alongside Python-based data visualizations.The system is built on a decoupled architecture, separating the heavy LLM inference and database execution (FastAPI) from the user-facing interface (Streamlit).
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NadaMohamedIbrahim/AI-SQL-Analyst/blob/main/AI-sql-analyst_final.ipynb)
 ---
 
 # ✨ Features
